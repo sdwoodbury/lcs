@@ -1,0 +1,6 @@
+\documentclass{article}
+\begin{document}
+
+\sum_{i=1}^{n} {i}
+
+\end{document}

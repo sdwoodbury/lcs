@@ -1,0 +1,8 @@
+length: 1000, threads: 1, speedup: 1.0, threads: 2, speedup: 2.00199597595, threads: 4, speedup: 4.01195142247, threads: 8, speedup: 8.05554120591
+length: 5000, threads: 1, speedup: 1.0, threads: 2, speedup: 2.00039983981, threads: 4, speedup: 4.00239807539, threads: 8, speedup: 8.01118199392
+length: 10000, threads: 1, speedup: 1.0, threads: 2, speedup: 2.00019995998, threads: 4, speedup: 4.00119951942, threads: 8, speedup: 8.00559550924
+length: 15000, threads: 1, speedup: 1.0, threads: 2, speedup: 2.00013331555, threads: 4, speedup: 4.0007997865, threads: 8, speedup: 8.00373133904
+length: 20000, threads: 1, speedup: 1.0, threads: 2, speedup: 2.00009999, threads: 4, speedup: 4.00059987993, threads: 8, speedup: 8.00279887866
+length: 30000, threads: 1, speedup: 1.0, threads: 2, speedup: 2.00006666222, threads: 4, speedup: 4.00039994665, threads: 8, speedup: 8.00186616849
+length: 40000, threads: 1, speedup: 1.0, threads: 2, speedup: 2.0000499975, threads: 4, speedup: 4.00029996999, threads: 8, speedup: 8.00139971983
+length: 80000, threads: 1, speedup: 1.0, threads: 2, speedup: 2.00002499937, threads: 4, speedup: 4.0001499925, threads: 8, speedup: 8.00069992998

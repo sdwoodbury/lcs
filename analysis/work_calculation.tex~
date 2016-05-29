@@ -1,0 +1,41 @@
+\documentclass {article}
+\usepackage {geometry}
+\usepackage {fancyhdr}
+\usepackage {amsmath , amsthm , amssymb}
+\usepackage {graphicx}
+\usepackage {hyperref}
+\newcommand{\tab}[1]{\hspace{.2\textwidth}\rlap{#1}}
+\begin {document}
+
+\tab{$T_1$ Calculation: (by line number)} \hfill \break
+let sequences a and b have length n. \hfill \break \hfill \break
+line 4: $O({n}^{2})$ \hfill \break 
+Proof: Array c is a double array. Its length and width are both size n. It follows that c has n * n elements. The array must be written to memory, and this time can be bounded by a constant. \hfill \break \hfill \break
+line 5: $O({n}^{2})$ \hfill \break Proof: Same as line 4. \hfill \break \hfill \break
+line 8-19: $\sum_{i=1}^{n} { O(1) \cdot i} = O{(1)} \cdot \frac{n(n+1)}{2}$ \hfill \break
+Proof: Lines 10-19 are $O{(1)}$ The maximum number of comparisons which can be made in each iteration of the loop is 2, and the number of statements, which are not comparisons, that execute each time the loop iterates is 5. \hfill \break
+Line 8 iterates a.length times. for the i-th iteration of line 8, line 9 iterates i times. This is a series. \hfill \break \hfill \break
+lines 21-32:  $\sum_{i=1}^{n} { O{(1)} \cdot i} = O{(1)} \cdot \frac{n(n+1)}{2}$ \hfill \break
+Proof: same as lines 8-19 \hfill \break \hfill \break
+lines 34-37: $O{(1)}$ \hfill \break \hfill \break
+lines 39-48: work is $\Omega {(n)}$  and $O{(2n-1)}$ \hfill \break
+Proof: The path along a nXn grid is at least n. The loop starts at the bottom right corner. If the path goes only left and not up, that is a path of length n. The longest path which can be taken is to go up and left as many times as possible. The loop stops when there is either no more room to go up or no more rom to go left. So the longest path is n-1 + n. \hfill \break \hfill \break
+Lines 49-50: $O{(n)}$ \hfill \break
+Proof: the longest common subsequence between two sequences, of length n, is n. If it was longer, that would contradict the premise that each sequence is of length n. \hfill \break \hfill \break
+line 52: $O{(1)}$. \hfill \break
+Proof: The array index could be cached, or a disk read may be required. The maximum read time is bounded by the time it takes to read the element from disk. \hfill \break \hfill \break
+$T_1 = O{({4n}^{2} + 5n - 1)}$ \hfill \break \hfill \break \hfill \break
+
+\tab{$T_\infty$ Calculation: (by line number)} \hfill \break
+The work for this calculation is $T_1$ for lines 1-5 and 34-52 plus the work to computer lines 8-32 in parallel. \hfill \break \hfill \break
+
+lines 8-19: $O{(n)}$ \hfill \break
+Proof: With infinite processors, the inner loop, lines 9-20, can be executed in parallel. The work for this would be $O{(1)}$. The outer loop, line 8, can not be executed in parallel. The work for this would be $O{(n)}$. \hfill \break \hfill \break
+lines 21-32: $O{(n)}$ \hfill \break
+Proof: same as the proof for lines 8-19 \hfill \break \hfill \break
+$T_\infty = O{({2n}^{2}+2n+1)}$ \hfill \break \hfill \break
+
+$\textbf{Parallelism:} O{(\frac{{4n}^{2}+5n-1}{{2n}^{2}+2n+1})}$
+\end {document}
+
+
